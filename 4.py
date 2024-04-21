@@ -163,8 +163,6 @@ def plot_predictions(test,predicted):
 plot_predictions(test_set, predicted_stock_price)
 
 """
-Sure, let's dive into Recurrent Neural Networks (RNNs) in detail.
-
 ### What is an RNN?
 
 A Recurrent Neural Network (RNN) is a type of neural network architecture specifically designed to work with sequential data. It's called "recurrent" because it performs the same task for every element of a sequence, with the output being dependent on previous computations. This makes it well-suited for tasks such as time series prediction, natural language processing (NLP), speech recognition, and more.
