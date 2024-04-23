@@ -4,6 +4,10 @@ import pandas as pd
 import seaborn as sns
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.model_selection import train_test_split
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
 
 # %matplotlib inline
 
@@ -41,8 +45,6 @@ sns.heatmap(data=correlation_matrix, annot=True)
 X = df.drop('medv', axis = 1)
 Y = df['medv']
 
-from sklearn.model_selection import train_test_split
-
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.2, random_state=5)
 print(X_train.shape)
 print(X_test.shape)
@@ -51,10 +53,6 @@ print(Y_test.shape)
 
 # lin_model = LinearRegression()
 # lin_model.fit(X_train, Y_train)
-
-import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense
 
 # Define the number of features
 num_features = X_train.shape[1]
