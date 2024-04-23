@@ -45,6 +45,10 @@ sns.heatmap(data=correlation_matrix, annot=True)
 X = df.drop('medv', axis = 1)
 Y = df['medv']
 
+# from sklearn.preprocessing import StandardScaler, MinMaxScaler
+# scaler = StandardScaler()
+# X_scaled = scaler.fit_transform(X)
+
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.2, random_state=5)
 print(X_train.shape)
 print(X_test.shape)
